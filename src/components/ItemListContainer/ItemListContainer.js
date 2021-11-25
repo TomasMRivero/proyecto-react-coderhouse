@@ -1,4 +1,4 @@
-export const ItemListContainer = ({ greeting }) => {
+export const ItemListContainer = ({ greeting = "" }) => {
     return(
         <>
             <h3>{greeting}</h3>
