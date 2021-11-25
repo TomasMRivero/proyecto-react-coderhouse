@@ -10,6 +10,9 @@ function App() {
       <NavBar pages={pages} />
       <ItemListContainer  greeting="hola coder"/>
       <Counter/>
+      <Counter stock={10}/>
+      <Counter stock={15} initial={5}/>
+      <Counter stock={15} initial={5} step={3}/>
     </>
   );
 }
