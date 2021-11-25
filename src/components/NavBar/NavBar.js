@@ -2,6 +2,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Button, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useState } from "react";
+
 export const NavBar = ({pages}) => {
 
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -92,4 +93,4 @@ export const NavBar = ({pages}) => {
     );
 }
 
-export default NavBar
+export default NavBar;
