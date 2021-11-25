@@ -5,10 +5,8 @@ export const CartWidget = () => {
     return(
         <IconButton
             size="large"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleOpenNavMenu}
+            aria-label="shopping cart"
+            aria-controls="shoppingcart-appbar"
             color="inherit"
         >
             <ShoppingCartItem/>

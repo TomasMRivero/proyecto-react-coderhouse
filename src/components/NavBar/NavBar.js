@@ -2,6 +2,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Button, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useState } from "react";
+import CartWidget from '../CartWidget/CartWidget';
 
 export const NavBar = ({pages}) => {
 
@@ -85,6 +86,9 @@ export const NavBar = ({pages}) => {
                             {page}
                         </Button>
                         ))}
+                    </Box>
+                    <Box sx={{flexGrow : 0}}>
+                            <CartWidget/>
                     </Box>
 
                 </Toolbar>
