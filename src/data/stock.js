@@ -120,4 +120,7 @@ export const stock = [
         stock:4,
         oferta: true
     },
-]
+];
+
+export default stock;
+
