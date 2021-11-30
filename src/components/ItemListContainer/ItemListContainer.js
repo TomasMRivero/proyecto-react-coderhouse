@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { stock } from '../../data/stock.js'
+import { ItemList } from '../ItemList/ItemList.js';
 
 export const ItemListContainer = ({ greeting = "" }) => {
 
@@ -26,7 +27,7 @@ export const ItemListContainer = ({ greeting = "" }) => {
             {
                 !loaded
                     ? <h2>Cargando...</h2>
-                    : <h2>Cargado! </h2>
+                    : <ItemList items={items} />
             }
         </>
     );
