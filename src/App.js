@@ -6,13 +6,14 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import NavBar from './components/NavBar/NavBar';
 
 function App() {
-  const pages = ['Remeras', 'Buzos']
+  const categorias = ['remeras', 'buzos']
   return (
     <BrowserRouter>
-      <NavBar pages={pages} />
+      <NavBar pages={categorias} />
         <Routes>
           <Route path="/" element={<ItemListContainer greeting="hola coder" />}/>
           <Route path="/categoria/:idCategoria" element={<ItemListContainer />} />
+          <Route path ="producto/:idProducto" />
           <Route path="/carrito"/>
         </Routes>
       {/* <ItemListContainer  greeting="hola coder"/>

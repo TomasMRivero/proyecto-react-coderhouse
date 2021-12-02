@@ -10,7 +10,7 @@ export const ItemList = ( { items = [] } ) => {
                 container
                 spacing={3}
                 direction={{xs:"column", sm:"row"}}
-                justifyContent="flex-staWrt"
+                justifyContent="flex-start"
                 alignItems="center"
                 sx={{p:3}}          
             >
@@ -20,7 +20,7 @@ export const ItemList = ( { items = [] } ) => {
                         <Item key={el.id} item={el}/>
                     </Grid>
                 )
-            }W
+            }
             </Grid>
         </div>
     )

@@ -2,6 +2,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Button, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 
 export const NavBar = ({pages}) => {
@@ -25,7 +26,9 @@ export const NavBar = ({pages}) => {
                         component="div"
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
-                        APP
+                        <Link to="/">
+                            APP
+                        </Link>
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} >
@@ -61,7 +64,9 @@ export const NavBar = ({pages}) => {
 
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{page}</Typography>
+                                <Link to="/">
+                                    <Typography textAlign="center">{page}</Typography>
+                                </Link>
                                 </MenuItem>
                             ))}
 
@@ -83,7 +88,10 @@ export const NavBar = ({pages}) => {
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}
                         >
-                            {page}
+                            
+                            <Link to={`/categoria/${page}`}>
+                                {page}
+                            </Link>
                         </Button>
                         ))}
                     </Box>
