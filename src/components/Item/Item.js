@@ -1,10 +1,11 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material"
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from "@mui/material"
 
 export const Item = ( {item} ) => {
 
     return (
         <Card sx={{display: 'flex', flexDirection: 'column'}}>
-            <CardMedia component="img" image = {item.img} alt={item.nombre}/>
+        <CardActionArea>
+            <CardMedia component="img" image = {item.imgCard} alt={item.nombre}/>
             <CardContent>
                 <Typography
                     gutterBottom
@@ -18,9 +19,7 @@ export const Item = ( {item} ) => {
                 <Typography variant="subtitle1">Precio: <b>${item.precio}</b></Typography>
                 <Typography variant="body" component="div" noWrap>{item.descripcion}</Typography>
             </CardContent>
-            <CardActions sx={{alignSelf:"center"}}>
-                <Button>Ver más</Button>
-            </CardActions>
+            </CardActionArea>
         </Card>
     )
 }

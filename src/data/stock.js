@@ -2,7 +2,8 @@ export const stock = [
     {
         id:1,
         nombre:'Homero Arbusto',
-        img: 'https://via.placeholder.com/200',
+        imgCard: 'https://via.placeholder.com/200',
+        imgDetail: 'https://via.placeholder.com/800',
         precio:1500,
         descripcion:'Remera Homero Arbusto',
         categoria:'remera',
@@ -14,7 +15,8 @@ export const stock = [
     {
         id:2,
         nombre:'Homero Arbusto',
-        img: 'https://via.placeholder.com/200',
+        imgCard: 'https://via.placeholder.com/200',
+        imgDetail: 'https://via.placeholder.com/800',
         precio:1500,
         descripcion:'Remera Homero Arbusto',
         categoria:'remera',
@@ -26,7 +28,8 @@ export const stock = [
     {
         id:3,
         nombre:'Homero Arbusto',
-        img: 'https://via.placeholder.com/200',
+        imgCard: 'https://via.placeholder.com/200',
+        imgDetail: 'https://via.placeholder.com/800',
         precio:1500,
         descripcion:'Remera Homero Arbusto',
         categoria:'remera',
@@ -38,7 +41,8 @@ export const stock = [
     {
         id:4,
         nombre:'Homero Arbusto',
-        img: 'https://via.placeholder.com/200',
+        imgCard: 'https://via.placeholder.com/200',
+        imgDetail: 'https://via.placeholder.com/800',
         precio:1500,
         descripcion:'Remera Homero Arbusto',
         categoria:'remera',
@@ -50,7 +54,8 @@ export const stock = [
     {
         id:5,
         nombre:'Homero Arbusto',
-        img: 'https://via.placeholder.com/200',
+        imgCard: 'https://via.placeholder.com/200',
+        imgDetail: 'https://via.placeholder.com/800',
         precio:1500,
         descripcion:'Remera Homero Arbusto',
         categoria:'remera',
@@ -62,7 +67,8 @@ export const stock = [
     {
         id:6,
         nombre:'Akatsuki',
-        img: 'https://via.placeholder.com/200',
+        imgCard: 'https://via.placeholder.com/200',
+        imgDetail: 'https://via.placeholder.com/800',
         precio:3500,
         descripcion:'Buzo Akatsuki',
         categoria:'buzo',
@@ -74,7 +80,8 @@ export const stock = [
     {
         id:7,
         nombre:'Akatsuki',
-        img: 'https://via.placeholder.com/200',
+        imgCard: 'https://via.placeholder.com/200',
+        imgDetail: 'https://via.placeholder.com/800',
         precio:3500,
         descripcion:'Buzo Akatsuki',
         categoria:'buzo',
@@ -86,7 +93,8 @@ export const stock = [
     {
         id:8,
         nombre:'Akatsuki',
-        img: 'https://via.placeholder.com/200',
+        imgCard: 'https://via.placeholder.com/200',
+        imgDetail: 'https://via.placeholder.com/800',
         precio:3500,
         descripcion:'Buzo Akatsuki',
         categoria:'buzo',
@@ -98,7 +106,8 @@ export const stock = [
     {
         id:9,
         nombre:'Akatsuki',
-        img: 'https://via.placeholder.com/200',
+        imgCard: 'https://via.placeholder.com/200',
+        imgDetail: 'https://via.placeholder.com/800',
         precio:3500,
         descripcion:'Buzo Akatsuki',
         categoria:'buzo',
@@ -110,7 +119,8 @@ export const stock = [
     {
         id:10,
         nombre:'Akatsuki',
-        img: 'https://via.placeholder.com/200',
+        imgCard: 'https://via.placeholder.com/200',
+        imgDetail: 'https://via.placeholder.com/800',
         precio:3500,
         descripcion:'Buzo Akatsuki',
         categoria:'buzo',
@@ -122,7 +132,8 @@ export const stock = [
     {
         id:11,
         nombre:'Akatsuki',
-        img: 'https://via.placeholder.com/200',
+        imgCard: 'https://via.placeholder.com/200',
+        imgDetail: 'https://via.placeholder.com/800',
         precio:3500,
         descripcion:'Buzo Akatsuki',
         categoria:'buzo',
