@@ -6,10 +6,16 @@ export const ItemList = ( { items = [] } ) => {
         <div>
             <h2>Productos</h2>
             <hr />
-            <Grid container spacing={1}>
+            <Grid
+                container
+                spacing={3}
+                direction={{xs:"column", sm:"row"}}
+                justifyContent="flex-start"
+                alignItems="center"                
+            >
             {
                 items.map( (el) =>
-                    <Grid item xs={3}>
+                    <Grid item xs={12} sm={4} md={3} xl={2}>
                         <Item key={el.id} item={el}/>
                     </Grid>
                 )
