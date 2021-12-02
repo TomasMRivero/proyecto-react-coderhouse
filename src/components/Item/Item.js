@@ -11,11 +11,12 @@ export const Item = ( {item} ) => {
                     align="center"
                     variant="h5"
                     component="div"
+                    noWrap
                 >
                     {item.nombre}
                 </Typography>
                 <Typography variant="subtitle1">Precio: <b>${item.precio}</b></Typography>
-                <Typography variant="body">{item.descripcion}</Typography>
+                <Typography variant="body" component="div" noWrap>{item.descripcion}</Typography>
             </CardContent>
             <CardActions sx={{alignSelf:"center"}}>
                 <Button>Ver más</Button>
