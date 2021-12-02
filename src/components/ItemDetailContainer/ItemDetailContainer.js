@@ -11,7 +11,7 @@ export const ItemDetailContainer = () => {
         return new Promise( ( resolve, reject ) => {
             setTimeout( () => {
                 resolve ( stock.find(e => e.id === id) )
-            }, 2000 );
+            }, 200 );
         } );
     }
 

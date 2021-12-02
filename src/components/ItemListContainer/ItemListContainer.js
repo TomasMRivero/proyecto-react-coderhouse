@@ -13,7 +13,7 @@ export const ItemListContainer = ({ greeting = "" }) => {
     const pedirDatos = () => {
         return new Promise( (resolve, reject) =>
             setTimeout( () =>
-                resolve(stock), 2000 ) 
+                resolve(stock), 200 ) 
         );
     }
 
@@ -31,6 +31,13 @@ export const ItemListContainer = ({ greeting = "" }) => {
 
     return(
         <>
+            <h2>
+                {
+                    greeting
+                    ? greeting
+                    : idCategoria.toUpperCase()
+                }
+            </h2>
             {
                 loading
                     ? <h2>Cargando...</h2>
