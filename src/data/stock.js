@@ -2,6 +2,7 @@ export const stock = [
     {
         id:1,
         nombre:'Homero Arbusto',
+        img: 'https://via.placeholder.com/200',
         precio:1500,
         descripcion:'Remera Homero Arbusto',
         categoria:'remera',
@@ -13,6 +14,7 @@ export const stock = [
     {
         id:2,
         nombre:'Homero Arbusto',
+        img: 'https://via.placeholder.com/200',
         precio:1500,
         descripcion:'Remera Homero Arbusto',
         categoria:'remera',
@@ -24,6 +26,7 @@ export const stock = [
     {
         id:3,
         nombre:'Homero Arbusto',
+        img: 'https://via.placeholder.com/200',
         precio:1500,
         descripcion:'Remera Homero Arbusto',
         categoria:'remera',
@@ -35,6 +38,7 @@ export const stock = [
     {
         id:4,
         nombre:'Homero Arbusto',
+        img: 'https://via.placeholder.com/200',
         precio:1500,
         descripcion:'Remera Homero Arbusto',
         categoria:'remera',
@@ -46,6 +50,7 @@ export const stock = [
     {
         id:5,
         nombre:'Homero Arbusto',
+        img: 'https://via.placeholder.com/200',
         precio:1500,
         descripcion:'Remera Homero Arbusto',
         categoria:'remera',
@@ -57,6 +62,7 @@ export const stock = [
     {
         id:6,
         nombre:'Akatsuki',
+        img: 'https://via.placeholder.com/200',
         precio:3500,
         descripcion:'Remera Homero Arbusto',
         categoria:'buzo',
@@ -66,8 +72,9 @@ export const stock = [
         oferta: false
     },
     {
-        id:6,
+        id:7,
         nombre:'Akatsuki',
+        img: 'https://via.placeholder.com/200',
         precio:3500,
         descripcion:'Remera Homero Arbusto',
         categoria:'buzo',
@@ -77,8 +84,9 @@ export const stock = [
         oferta: true
     },
     {
-        id:7,
+        id:8,
         nombre:'Akatsuki',
+        img: 'https://via.placeholder.com/200',
         precio:3500,
         descripcion:'Remera Homero Arbusto',
         categoria:'buzo',
@@ -88,8 +96,9 @@ export const stock = [
         oferta: true
     },
     {
-        id:8,
+        id:9,
         nombre:'Akatsuki',
+        img: 'https://via.placeholder.com/200',
         precio:3500,
         descripcion:'Remera Homero Arbusto',
         categoria:'buzo',
@@ -99,8 +108,9 @@ export const stock = [
         oferta: true
     },
     {
-        id:9,
+        id:10,
         nombre:'Akatsuki',
+        img: 'https://via.placeholder.com/200',
         precio:3500,
         descripcion:'Remera Homero Arbusto',
         categoria:'buzo',
@@ -110,8 +120,9 @@ export const stock = [
         oferta: true
     },
     {
-        id:10,
+        id:11,
         nombre:'Akatsuki',
+        img: 'https://via.placeholder.com/200',
         precio:3500,
         descripcion:'Remera Homero Arbusto',
         categoria:'buzo',

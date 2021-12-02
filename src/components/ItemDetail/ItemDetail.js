@@ -1,4 +1,4 @@
-export const Item = ( {item} ) => {
+export const ItemDetail = ( {item} ) => {
 
     return (
         <div>
@@ -6,7 +6,7 @@ export const Item = ( {item} ) => {
             <img src = {item.img} alt={item.nombre}/>
             <p>Precio: ${item.precio}</p>
             <p>{item.desc}</p>
-            <button>Ver más</button>
+            <button>Agregar al carrito</button>
         </div>
     )
 }
