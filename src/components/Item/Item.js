@@ -1,9 +1,11 @@
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from "@mui/material"
+import { Link } from "react-router-dom"
 
 export const Item = ( {item} ) => {
 
     return (
         <Card sx={{display: 'flex', flexDirection: 'column'}}>
+        <Link to={`/producto/${item.id}`}>
         <CardActionArea>
             <CardMedia component="img" image = {item.imgCard} alt={item.nombre}/>
             <CardContent>
@@ -20,6 +22,7 @@ export const Item = ( {item} ) => {
                 <Typography variant="body" component="div" noWrap>{item.descripcion}</Typography>
             </CardContent>
             </CardActionArea>
+        </Link>
         </Card>
     )
 }
