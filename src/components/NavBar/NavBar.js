@@ -64,9 +64,9 @@ export const NavBar = ({pages}) => {
 
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                <Link to={`/categoria/${page}`}>
-                                    <Typography textAlign="center">{page.toUpperCase()}</Typography>
-                                </Link>
+                                    <Link to={`/categoria/${page}`}>
+                                        <Typography textAlign="center">{page.toUpperCase()}</Typography>
+                                    </Link>
                                 </MenuItem>
                             ))}
 

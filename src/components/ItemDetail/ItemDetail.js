@@ -15,6 +15,7 @@ export const ItemDetail = ( {item} ) => {
                             id: item.id,
                             precio: item.precio,
                             nombre: item.nombre,
+                            img: item.imgCard,
                             talle: item.talle,
                             color: item.color,
                             cantidad: counter
@@ -22,7 +23,7 @@ export const ItemDetail = ( {item} ) => {
     }
 
     return (
-        <Container maxwidth="lg" sx={{p:3}}>
+        <Container maxWidth="lg" sx={{p:3}}>
             <Grid container columnSpacing={3}>
                 <Grid item xs={7} sx={{overflow:"hidden"}}>
                     <img style={{

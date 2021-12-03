@@ -1,6 +1,7 @@
 import ShoppingCartItem from "@mui/icons-material/ShoppingCart";
 import { Badge, IconButton } from "@mui/material";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
 export const CartWidget = () => {
@@ -12,9 +13,11 @@ export const CartWidget = () => {
             aria-controls="shoppingcart-appbar"
             color="inherit"
         >
-            <Badge badgeContent = {totalCantidad()} color="warning">
-                <ShoppingCartItem/>
-            </Badge>
+            <Link to="/carrito">
+                <Badge badgeContent = {totalCantidad()} color="warning">
+                    <ShoppingCartItem/>
+                </Badge>
+            </Link>
         </IconButton>
     );
 }
