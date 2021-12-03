@@ -1,6 +1,5 @@
-import { Card, Grid, IconButton, Paper, Typography } from "@mui/material"
+import { Grid, IconButton, Paper, Typography } from "@mui/material"
 import DeleteIcon from '@mui/icons-material/Delete'
-import { Box } from "@mui/system";
 
 export const CartItem = ( {cartItem, remove} ) => {
 
