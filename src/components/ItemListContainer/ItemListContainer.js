@@ -1,33 +1,21 @@
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
 import { stock } from '../../data/stock.js'
+import { getProductsFromFirebase } from '../../redux/actions/productsActions.js';
 import { ItemList } from '../ItemList/ItemList.js';
 
 export const ItemListContainer = ({ greeting = "" }) => {
 
-    const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(false);
-
+    const dispatch = useDispatch();
+    const { productos } = useSelector(state => state);
+    const { loading } = useSelector(state => state.ui);
     const { idCategoria } = useParams();
 
-    const pedirDatos = () => {
-        return new Promise( (resolve, reject) =>
-            setTimeout( () =>
-                resolve(stock), 200 ) 
-        );
-    }
-
     useEffect(() => {
-        setLoading(true);
-        pedirDatos()
-            .then( resp => {
-                idCategoria
-                    ? setItems(resp.filter(e => e.categoria == idCategoria))
-                    : setItems(resp);
-            })
-            .catch( err => console.error(err) )
-            .finally( () => setLoading(false) )
-    },[ idCategoria ]);
+        dispatch( getProductsFromFirebase( idCategoria ))
+    },[ idCategoria, dispatch ]);
 
     return(
         <>
@@ -41,7 +29,7 @@ export const ItemListContainer = ({ greeting = "" }) => {
             {
                 loading
                     ? <h2>Cargando...</h2>
-                    : <ItemList items={items} />
+                    : <ItemList items={productos} />
             }
         </>
     );
