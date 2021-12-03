@@ -1,5 +1,6 @@
 import { Card, Grid, IconButton, Paper, Typography } from "@mui/material"
 import DeleteIcon from '@mui/icons-material/Delete'
+import { Box } from "@mui/system";
 
 export const CartItem = ( {cartItem, remove} ) => {
 
@@ -9,7 +10,7 @@ export const CartItem = ( {cartItem, remove} ) => {
     }
     return (
         <Paper>
-            <Grid container direction="row" spacing={2}>
+            <Grid container direction="row" >
                 <Grid item sm={2} sx={ {display:{xs:"none", sm:"inherit"} }}>
                     <img
                     src = {cartItem.img}

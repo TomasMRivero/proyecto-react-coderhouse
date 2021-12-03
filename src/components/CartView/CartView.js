@@ -39,7 +39,8 @@ export const CartView = () => {
             <Grid
                 container
                 direction = "column"
-                justifyContent="flex-start"
+                alignContent="space-between"
+                spacing={3}
             >
                 {
                     cart.map(cartItem =>
