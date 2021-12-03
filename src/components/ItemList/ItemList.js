@@ -13,8 +13,8 @@ export const ItemList = ( { items = [] } ) => {
         >
         {
             items.map( (el) =>
-                <Grid item xs={12} sm={4} md={3} xl={2} zeroMinWidth>
-                    <Item key={el.id} item={el}/>
+                <Grid key={el.id} item xs={12} sm={4} md={3} xl={2} zeroMinWidth>
+                    <Item item={el}/>
                 </Grid>
             )
         }

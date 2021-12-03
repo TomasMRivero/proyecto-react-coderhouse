@@ -4,7 +4,7 @@ import { CartContext } from "../../context/CartContext";
 import useCounter from "../../hooks/useCounter";
 import Counter from "../Counter/Counter"
 
-export const ItemDetail = ( {item} ) => {
+export const ItemDetail = ( {item = {} } ) => {
 
     const { agregarAlCarrito, estaEnCarrito } = useContext(CartContext);
 
