@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-export const useCounter = (initial = 0, step = 1) => {
+export const useCounter = (min, max, initial = 0, step = 1) => {
     const [counter, setCounter] = useState(initial);
 
     const increment = () => {
-        setCounter(counter + step);
+        counter < max && setCounter(counter + step);
     }
 
     const decrement = () => {
-        setCounter(counter - step);
+        counter > min && setCounter(counter - step);
     }
 
     return {

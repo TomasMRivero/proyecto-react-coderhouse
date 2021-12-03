@@ -1,7 +1,10 @@
 import ShoppingCartItem from "@mui/icons-material/ShoppingCart";
-import { IconButton } from "@mui/material";
+import { Badge, IconButton } from "@mui/material";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 export const CartWidget = () => {
+    const { totalCantidad } = useContext(CartContext)
     return(
         <IconButton
             size="large"
@@ -9,7 +12,9 @@ export const CartWidget = () => {
             aria-controls="shoppingcart-appbar"
             color="inherit"
         >
-            <ShoppingCartItem/>
+            <Badge badgeContent = {totalCantidad()} color="warning">
+                <ShoppingCartItem/>
+            </Badge>
         </IconButton>
     );
 }

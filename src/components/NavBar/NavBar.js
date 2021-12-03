@@ -64,8 +64,8 @@ export const NavBar = ({pages}) => {
 
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                <Link to="/">
-                                    <Typography textAlign="center">{page}</Typography>
+                                <Link to={`/categoria/${page}`}>
+                                    <Typography textAlign="center">{page.toUpperCase()}</Typography>
                                 </Link>
                                 </MenuItem>
                             ))}
@@ -78,7 +78,9 @@ export const NavBar = ({pages}) => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
-                        LOGO
+                        <Link to="/">
+                            LOGO
+                        </Link>
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
