@@ -37,13 +37,11 @@ export const getSigleProductFromFirebase = (idProducto) => {
 
         getDoc(docRef)
             .then( doc => {
-                console.log("inicia")
                 const producto = {
                     id: doc.id,
                     ...doc.data()
                 };
                 dispatch( displayProduct( producto ) );
-                console.log("termina")
             })
             .finally( () => 
                 dispatch( finishLoading() )

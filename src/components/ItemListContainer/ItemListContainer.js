@@ -9,7 +9,6 @@ import { ItemList } from '../ItemList/ItemList.js';
 export const ItemListContainer = ({ greeting = "" }) => {
 
     const dispatch = useDispatch();
-    console.log(useSelector(state => state))
     const { productos } = useSelector(state => state.productos);
     const { loading } = useSelector(state => state.ui);
     const { idCategoria } = useParams();
