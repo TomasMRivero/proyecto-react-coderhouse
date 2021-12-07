@@ -1,15 +1,20 @@
 import { Button, Container, Grid, Typography } from "@mui/material";
 import { useContext } from "react"
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext"
+import { removeFromLocalStorage } from "../../redux/actions/cartActions";
 import { CartItem } from "../CartItem/CartItem";
 
 export const CartView = () => {
-    const { cart,
+    const dispatch = useDispatch();
+    const {
         totalCompra,
         removerDelCarrito,
         vaciarCarrito
     } = useContext(CartContext);
+
+    const {cart} = useSelector(state => state.cart)
 
     if (cart.length === 0) {
         return (
@@ -45,7 +50,11 @@ export const CartView = () => {
                 {
                     cart.map(cartItem =>
                         <Grid item zeroMinWidth>
-                            <CartItem key={cartItem.id} cartItem={cartItem} remove={removerDelCarrito} />
+                            <CartItem
+                                key={cartItem.id}
+                                cartItem={cartItem}
+                                remove={() => dispatch(removeFromLocalStorage(cartItem.id))}
+                            />
                         </Grid>
                     )
                 }
