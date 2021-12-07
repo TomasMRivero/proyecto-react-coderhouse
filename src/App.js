@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -6,10 +7,14 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
 import { CartProvider } from './context/CartContext';
+import { getProductsFromLocalStorage } from './redux/actions/cartActions';
 import { store } from './redux/store/store';
 
 function App() {
   const categorias = ['remeras', 'buzos']
+  useEffect ( () => {
+    getProductsFromLocalStorage();
+  }, [])
   return (
     <Provider store={ store }>
       <CartProvider>
