@@ -14,7 +14,7 @@ export const CartView = () => {
         vaciarCarrito
     } = useContext(CartContext);
 
-    const {cart} = useSelector(state => state.cart)
+    const {cart} = useSelector(state => state)
 
     if (cart.length === 0) {
         return (

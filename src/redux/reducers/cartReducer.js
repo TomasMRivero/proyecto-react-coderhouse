@@ -1,17 +1,15 @@
 import { ADD_TO_CART, INIT_CART, REMOVE_FROM_CART } from "../actions/cartActions";
 
-const initialState = {
-    cart:[]
-};
+const initialState = [];
 
 export const cartReducer = (state = initialState, action) => {
     switch(action.type){
         case INIT_CART:
-            return {cart: [...action.payload]};
+            return [...action.payload];
         case ADD_TO_CART:
-            return {cart: [...state.cart, action.payload]};
+            return [...state, action.payload];
         case REMOVE_FROM_CART:
-            return {cart: state.cart.filter( e => e.id !== action.payload )};
+            return state.filter( e => e.id !== action.payload );
         default:
             return state;
     }
