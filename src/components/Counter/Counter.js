@@ -1,7 +1,7 @@
 import { Button, Card, CardContent, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
-export const Counter = ({ increment, decrement, onAdd, counter, min = 0, max = 100, children }) => {
+export const Counter = ({ increment, decrement, counter, min = 0, max = 100, children }) => {
 
     return(
         <>

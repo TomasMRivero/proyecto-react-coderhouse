@@ -1,25 +1,44 @@
 import { Button, Container, Grid, Typography } from "@mui/material"
 import { useContext } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { CartContext } from "../../context/CartContext";
 import useCounter from "../../hooks/useCounter";
+import { addToLocalStorage } from "../../redux/actions/cartActions";
 import Counter from "../Counter/Counter"
 
 export const ItemDetail = ( {item = {} } ) => {
+
+    const dispatch = useDispatch()
+    const { cart } = useSelector(state => state);
 
     const { agregarAlCarrito, estaEnCarrito } = useContext(CartContext);
 
     const {counter, increment, decrement} = useCounter(0, item.stock);
 
-    const handleAgregar = () => {
-        counter > 0 && agregarAlCarrito({
-                            id: item.id,
-                            precio: item.precio,
-                            nombre: item.nombre,
-                            img: item.imgCard,
-                            talle: item.talle,
-                            color: item.color,
-                            cantidad: counter
-        });
+    // const handleAgregar = () => {
+    //     counter > 0 && agregarAlCarrito({
+    //                         id: item.id,
+    //                         precio: item.precio,
+    //                         nombre: item.nombre,
+    //                         img: item.imgCard,
+    //                         talle: item.talle,
+    //                         color: item.color,
+    //                         cantidad: counter
+    //     });
+    // }
+
+    const handleAgregar = (item) => {
+        counter > 0 && dispatch (addToLocalStorage(
+            {
+                id: item.id,
+                precio: item.precio,
+                nombre: item.nombre,
+                img: item.imgCard,
+                talle: item.talle,
+                color: item.color,
+                cantidad: counter
+            }
+        ) );
     }
 
     return (
@@ -43,11 +62,10 @@ export const ItemDetail = ( {item = {} } ) => {
                         :   <Counter 
                                 increment = {increment}
                                 decrement = {decrement}
-                                onAdd = {handleAgregar}
                                 counter = {counter}
                                 max = {item.stock}
                             >
-                                <Button variant="outlined" onClick={handleAgregar}>Agregar al carrito</Button>
+                                <Button variant="outlined" onClick={() => handleAgregar(item)}>Agregar al carrito</Button>
                             </Counter>
                         }
                 </Grid>
