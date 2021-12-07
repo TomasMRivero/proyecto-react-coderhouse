@@ -1,6 +1,7 @@
 import { Button, Container, Grid, Typography } from "@mui/material"
 import { useContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import useCounter from "../../hooks/useCounter";
 import { addToLocalStorage } from "../../redux/actions/cartActions";
@@ -10,7 +11,7 @@ export const ItemDetail = ( {item = {} } ) => {
 
     const dispatch = useDispatch()
 
-    const { agregarAlCarrito, estaEnCarrito } = useContext(CartContext);
+    const {cart} = useSelector(state => state)
 
     const {counter, increment, decrement} = useCounter(0, item.stock);
 
@@ -44,8 +45,12 @@ export const ItemDetail = ( {item = {} } ) => {
                     <Typography variant="h3" gutterBottom>{item.nombre}</Typography>
                     <Typography variant="subtitle1" gutterBottom>Precio: <b>${item.precio}</b></Typography>
                     <Typography variant="body" gutterBottom>{item.descripcion}</Typography>
-                    {estaEnCarrito(item.id)
-                        ?   <Button variant="outlined" disabled>Ir a comprar</Button>                        
+                    {cart.some( el => el.id === item.id )
+                        ?   <Button variant="contained" >
+                                <Link to="/carrito" >
+                                    Ir a comprar
+                                </Link>
+                            </Button>                        
                         :   <Counter 
                                 increment = {increment}
                                 decrement = {decrement}

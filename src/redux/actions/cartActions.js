@@ -1,6 +1,7 @@
 export const INIT_CART = 'INIT_CART';
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+export const CLEAR_CART = 'CLEAR_CART';
 
 export const getProductsFromLocalStorage = () => {
     return ( dispatch ) => {
@@ -22,8 +23,24 @@ export const addToLocalStorage = (item) => {
 export const removeFromLocalStorage = (id) => {
     return (dispatch) => {
         let cart = JSON.parse(localStorage.getItem("cart"));
-        localStorage.setItem("cart", JSON.stringify(cart.filter( e => e.id !== id )));
+        cart = cart.filter( e => e.id !== id );
+        cart.length
+            ? localStorage.setItem("cart", JSON.stringify(cart))
+            : localStorage.removeItem("cart");
         dispatch ( removeFromCart(id) );
+    }
+}
+
+export const emptyLocalStorage = () => {
+    return (dispatch) => {
+        localStorage.removeItem("cart");
+        dispatch( clearCart() )
+    }
+}
+
+export const clearCart = () => {
+    return {
+        type: CLEAR_CART,
     }
 }
 
