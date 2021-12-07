@@ -69,7 +69,11 @@ export const CartView = () => {
                             <Button variant="outlined" color="warning" onClick={() => dispatch( emptyLocalStorage() )}>Vaciar Carrito</Button>
                     </Grid>
                     <Grid item>
-                            <Button variant="contained">Finalizar Compra</Button>
+                            <Button variant="contained">
+                                <Link to="/checkout">
+                                    Finalizar Compra
+                                </Link>
+                            </Button>
                     </Grid>
                 </Grid>
             </Grid>
