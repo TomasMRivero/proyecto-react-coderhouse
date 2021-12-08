@@ -1,4 +1,4 @@
-import { Button, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material"
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material"
 import { Link } from "react-router-dom"
 
 export const Item = ( {item} ) => {

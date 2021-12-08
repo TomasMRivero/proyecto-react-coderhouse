@@ -5,7 +5,7 @@ const initialState = {
     producto: {}
 }
 
-export const productsReducer = (state = [], action) => {
+export const productsReducer = (state = initialState, action) => {
     switch(action.type){
         case LIST_PRODUCTS:
             return {

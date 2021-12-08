@@ -1,8 +1,6 @@
 import { Button, Container, Grid, Typography } from "@mui/material"
-import { useContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../context/CartContext";
 import useCounter from "../../hooks/useCounter";
 import { addToLocalStorage } from "../../redux/actions/cartActions";
 import Counter from "../Counter/Counter"

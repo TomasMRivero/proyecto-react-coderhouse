@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
-import { stock } from '../../data/stock.js'
 import { getProductsFromFirebase } from '../../redux/actions/productsActions.js';
 import { ItemList } from '../ItemList/ItemList.js';
 

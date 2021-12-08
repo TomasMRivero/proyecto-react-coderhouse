@@ -1,9 +1,7 @@
 import ShoppingCartItem from "@mui/icons-material/ShoppingCart";
 import { Badge, IconButton } from "@mui/material";
-import { useContext } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../context/CartContext";
 
 export const CartWidget = () => {
     const { cart } = useSelector(state => state);
