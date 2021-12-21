@@ -2,7 +2,6 @@ import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 export const Counter = ({ increment, decrement, counter, min = 0, max = 100, children }) => {
-
     return(
         <>
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pl: 1, pb: 1, borderRadius: '10%' }}>

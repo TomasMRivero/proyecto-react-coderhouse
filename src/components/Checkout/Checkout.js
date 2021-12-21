@@ -45,11 +45,15 @@ export const Checkout = () => {
                 
                 res.docs.forEach(doc => {
                     const itemToUpdate = cart.find(p => p.id === doc.id);
-                    doc.data().stock >= itemToUpdate.cantidad
+                    let updatedStock = doc.data().stock;
+                    const sizeIndex = updatedStock.findIndex(i => i.talle === itemToUpdate.talle);
+                    const colorIndex = updatedStock[sizeIndex].colores.findIndex(t => t.color === itemToUpdate.color);
+                    updatedStock[sizeIndex].colores[colorIndex].cantidad -= itemToUpdate.cantidad;
+                    doc.data().stock[sizeIndex].colores[colorIndex].cantidad >= itemToUpdate.cantidad
                         ?   batch.update(doc.ref, {
-                            stock: doc.data().stock - itemToUpdate.cantidad
-                            })
-                        :   outOfStock.push(itemToUpdate);
+                           stock: updatedStock
+                           })
+                       :   outOfStock.push(itemToUpdate);
                 });
                 if(!outOfStock.length){
                     

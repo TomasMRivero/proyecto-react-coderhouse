@@ -1,3 +1,5 @@
+
+
 export const stock = [
     {
         id:1,
@@ -7,140 +9,77 @@ export const stock = [
         precio:1500,
         descripcion:'Remera Homero Arbusto',
         categoria:'remeras',
-        color:'verde',
-        talle:'S',
-        stock:20,
-        oferta: false
+        stock:[
+            {talle: 'S', colores:[{color: 'verde', cantidad: 20, hex:"#41BD30"},{color: 'blanco', cantidad: 42, hex:"#ffffff"}]},
+            {talle: 'M', colores:[{color: 'verde', cantidad: 12, hex:"#41BD30"},{color: 'blanco', cantidad: 41, hex:"#ffffff"}]},
+            {talle: 'L', colores:[{color: 'verde', cantidad: 32, hex:"#41BD30"},{color: 'blanco', cantidad: 23, hex:"#ffffff"}]},
+            {talle: 'XL', colores:[{color: 'verde', cantidad: 42, hex:"#41BD30"},{color: 'blanco', cantidad: 32, hex:"#ffffff"}]},
+            {talle: 'XXL', colores:[{color: 'verde', cantidad: 8, hex:"#41BD30"},{color: 'blanco', cantidad: 12, hex:"#ffffff"}]}
+            ],
     },
     {
         id:2,
-        nombre:'Homero Arbusto',
+        nombre:'Akatsuki',
         imgCard: 'https://via.placeholder.com/200',
         imgDetail: 'https://via.placeholder.com/800',
-        precio:1500,
-        descripcion:'Remera Homero Arbusto',
-        categoria:'remeras',
-        color:'verde',
-        talle:'M',
-        stock:35,
-        oferta: false
+        precio:3500,
+        descripcion:'Buzo Akatsuki',
+        categoria:'buzos',
+        stock:[
+            {talle: 'S', colores:[{color: 'negro', cantidad: 20, hex:"#000000"},{color: 'blanco', cantidad: 42, hex:"#ffffff"}]},
+            {talle: 'M', colores:[{color: 'negro', cantidad: 12, hex:"#000000"},{color: 'blanco', cantidad: 41, hex:"#ffffff"}]},
+            {talle: 'L', colores:[{color: 'negro', cantidad: 32, hex:"#000000"},{color: 'blanco', cantidad: 23, hex:"#ffffff"}]},
+            {talle: 'XL', colores:[{color: 'negro', cantidad: 42, hex:"#000000"},{color: 'blanco', cantidad: 32, hex:"#ffffff"}]},
+            {talle: 'XXL', colores:[{color: 'negro', cantidad: 8, hex:"#000000"},{color: 'blanco', cantidad: 12, hex:"#ffffff"}]}
+            ],
     },
     {
         id:3,
-        nombre:'Homero Arbusto',
+        nombre:'Tortugas Ninja',
         imgCard: 'https://via.placeholder.com/200',
         imgDetail: 'https://via.placeholder.com/800',
-        precio:1500,
-        descripcion:'Remera Homero Arbusto',
+        precio:3500,
+        descripcion:'Remera tortugas ninja',
         categoria:'remeras',
-        color:'verde',
-        talle:'L',
-        stock:42,
-        oferta: false
+        stock:[
+            {talle: 'S', colores:[{color: 'negro', cantidad: 20, hex:"#000000"},{color: 'blanco', cantidad: 42, hex:"#ffffff"},{color: 'azul', cantidad: 12, hex:"#374B83"}]},
+            {talle: 'M', colores:[{color: 'negro', cantidad: 12, hex:"#000000"},{color: 'blanco', cantidad: 41, hex:"#ffffff"},{color: 'azul', cantidad: 32, hex:"#374B83"}]},
+            {talle: 'L', colores:[{color: 'negro', cantidad: 32, hex:"#000000"},{color: 'blanco', cantidad: 23, hex:"#ffffff"},{color: 'azul', cantidad: 1, hex:"#374B83"}]},
+            {talle: 'XL', colores:[{color: 'negro', cantidad: 42, hex:"#000000"},{color: 'blanco', cantidad: 32, hex:"#ffffff"},{color: 'azul', cantidad: 34, hex:"#374B83"}]},
+            {talle: 'XXL', colores:[{color: 'negro', cantidad: 8, hex:"#000000"},{color: 'blanco', cantidad: 12, hex:"#ffffff"},{color: 'azul', cantidad: 12, hex:"#374B83"}]}
+            ],
     },
     {
         id:4,
-        nombre:'Homero Arbusto',
+        nombre:'Uchiha',
         imgCard: 'https://via.placeholder.com/200',
         imgDetail: 'https://via.placeholder.com/800',
-        precio:1500,
-        descripcion:'Remera Homero Arbusto',
+        precio:3500,
+        descripcion:'Buzo Uchiha',
+        categoria:'buzos',
+        stock:[
+            {talle: 'S', colores:[{color: 'negro', cantidad: 20, hex:"#000000"},{color: 'blanco', cantidad: 42, hex:"#ffffff"}]},
+            {talle: 'M', colores:[{color: 'negro', cantidad: 12, hex:"#000000"},{color: 'blanco', cantidad: 41, hex:"#ffffff"}]},
+            {talle: 'L', colores:[{color: 'negro', cantidad: 32, hex:"#000000"},{color: 'blanco', cantidad: 23, hex:"#ffffff"}]},
+            {talle: 'XL', colores:[{color: 'negro', cantidad: 42, hex:"#000000"},{color: 'blanco', cantidad: 32, hex:"#ffffff"}]},
+            {talle: 'XXL', colores:[{color: 'negro', cantidad: 8, hex:"#000000"},{color: 'blanco', cantidad: 12, hex:"#ffffff"}]}
+            ],
+    },
+    {
+        id:3,
+        nombre:'Skeletor',
+        imgCard: 'https://via.placeholder.com/200',
+        imgDetail: 'https://via.placeholder.com/800',
+        precio:3500,
+        descripcion:'Remera skeletor',
         categoria:'remeras',
-        color:'verde',
-        talle:'XL',
-        stock:12,
-        oferta: false
-    },
-    {
-        id:5,
-        nombre:'Homero Arbusto',
-        imgCard: 'https://via.placeholder.com/200',
-        imgDetail: 'https://via.placeholder.com/800',
-        precio:1500,
-        descripcion:'Remera Homero Arbusto',
-        categoria:'remeras',
-        color:'blanco',
-        talle:'XXL',
-        stock:5,
-        oferta: false
-    },
-    {
-        id:6,
-        nombre:'Akatsuki',
-        imgCard: 'https://via.placeholder.com/200',
-        imgDetail: 'https://via.placeholder.com/800',
-        precio:3500,
-        descripcion:'Buzo Akatsuki',
-        categoria:'buzos',
-        color:'verde',
-        talle:'S',
-        stock:10,
-        oferta: false
-    },
-    {
-        id:7,
-        nombre:'Akatsuki',
-        imgCard: 'https://via.placeholder.com/200',
-        imgDetail: 'https://via.placeholder.com/800',
-        precio:3500,
-        descripcion:'Buzo Akatsuki',
-        categoria:'buzos',
-        color:'negro',
-        talle:'S',
-        stock:10,
-        oferta: true
-    },
-    {
-        id:8,
-        nombre:'Akatsuki',
-        imgCard: 'https://via.placeholder.com/200',
-        imgDetail: 'https://via.placeholder.com/800',
-        precio:3500,
-        descripcion:'Buzo Akatsuki',
-        categoria:'buzos',
-        color:'blanco',
-        talle:'S',
-        stock:21,
-        oferta: true
-    },
-    {
-        id:9,
-        nombre:'Akatsuki',
-        imgCard: 'https://via.placeholder.com/200',
-        imgDetail: 'https://via.placeholder.com/800',
-        precio:3500,
-        descripcion:'Buzo Akatsuki',
-        categoria:'buzos',
-        color:'negro',
-        talle:'M',
-        stock:3,
-        oferta: true
-    },
-    {
-        id:10,
-        nombre:'Akatsuki',
-        imgCard: 'https://via.placeholder.com/200',
-        imgDetail: 'https://via.placeholder.com/800',
-        precio:3500,
-        descripcion:'Buzo Akatsuki',
-        categoria:'buzos',
-        color:'blanco',
-        talle:'M',
-        stock:11,
-        oferta: true
-    },
-    {
-        id:11,
-        nombre:'Akatsuki',
-        imgCard: 'https://via.placeholder.com/200',
-        imgDetail: 'https://via.placeholder.com/800',
-        precio:3500,
-        descripcion:'Buzo Akatsuki',
-        categoria:'buzos',
-        color:'negro',
-        talle:'L',
-        stock:4,
-        oferta: true
+        stock:[
+            {talle: 'S', colores:[{color: 'negro', cantidad: 20, hex:"#000000"}]},
+            {talle: 'M', colores:[{color: 'negro', cantidad: 12, hex:"#000000"}]},
+            {talle: 'L', colores:[{color: 'negro', cantidad: 32, hex:"#000000"}]},
+            {talle: 'XL', colores:[{color: 'negro', cantidad: 42, hex:"#000000"}]},
+            {talle: 'XXL', colores:[{color: 'negro', cantidad: 8, hex:"#000000"}]}
+            ],
     },
 ];
 

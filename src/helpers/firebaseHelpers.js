@@ -10,8 +10,6 @@ const products = stock.map(i => {
         precio: i.precio,
         descripcion: i.descripcion,
         categoria: i.categoria,
-        color: i.color,
-        talle: i.talle,
         stock: i.stock
     }
 })

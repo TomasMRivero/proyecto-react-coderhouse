@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useCounter = (min, max, initial = 0, step = 1) => {
     const [counter, setCounter] = useState(initial);
+
+    useEffect(() => {
+        setCounter(initial);
+    }, [max, initial]);
 
     const increment = () => {
         counter < max && setCounter(counter + step);
